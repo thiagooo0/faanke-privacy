@@ -15,6 +15,13 @@ Both pages pick a language from the browser, and accept a `?lang=` override
 (`en`, `zh-Hans`, `zh-Hant`, `ja`, `es`, `fr`, `de`) so each App Store
 storefront can be pointed at its own language.
 
+## The header icon
+
+The `<svg class="mark">` in both pages is a verbatim copy of
+`Faanke/Resources/IconSource/AppIcon.svg` in the app repo, which is the single
+source of truth for the icon. If the icon changes there, re-copy it here —
+don't redraw it.
+
 ## Keeping the policy honest
 
 The privacy policy claims Faanke cannot reach the network. That holds only as
