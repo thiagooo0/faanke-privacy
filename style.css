@@ -53,23 +53,8 @@ header.masthead {
   width: 44px;
   height: 44px;
   flex: none;
-  border: 3px solid var(--tomato);
+  display: block;
   border-radius: 11px;
-  position: relative;
-  /* The app's own motif: a traced edge with a deliberate gap. */
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 34% 100%, 34% 88%, 0 88%);
-}
-
-.mark::after {
-  content: "";
-  position: absolute;
-  top: -9px;
-  left: 12px;
-  width: 12px;
-  height: 8px;
-  background: var(--vine);
-  border-radius: 60% 10% 60% 10%;
-  transform: rotate(-18deg);
 }
 
 .masthead h1 {
