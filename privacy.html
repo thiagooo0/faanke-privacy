@@ -32,42 +32,101 @@
 
 <!-- ============================ ENGLISH ============================ -->
 <section data-lang="en">
-  <p class="lede">Faanke collects nothing. It has no network access at all, so
-  none of your data can leave your Mac — not to us, not to anyone.</p>
+  <p class="lede">Faanke has no server, no account and no analytics, and keeps
+  nothing about you anywhere but your own device. Faanke for Mac never touches
+  the network. Faanke for iPhone goes online for one optional feature, the
+  weather, and then talks only to Apple.</p>
 
   <h2>What Faanke stores</h2>
-  <p>Everything Faanke saves stays on your own Mac, inside the app's sandbox
-  container:</p>
+  <p>Everything Faanke saves stays on your own Mac or iPhone, inside the app's
+  own storage:</p>
   <ul>
-    <li><strong>Session records</strong> — the start time, length, and whether
-      it was a focus or a rest period, so the History page can show your
-      streaks.</li>
-    <li><strong>Preferences</strong> — your focus, rest and extend durations,
-      the edge-effect colour and thickness, your language choice, the global
-      shortcut, and whether Faanke opens at login.</li>
+    <li><strong>Session records</strong> — when each focus or rest period
+      started, how long it ran and whether it ran to the end, for History (and,
+      on iPhone, the tomatoes and flowers on the home screen).</li>
+    <li><strong>Preferences</strong> — durations, how the clock or edge effect
+      looks, your language, and on Mac the global shortcut and whether Faanke
+      opens at login.</li>
+    <li><strong>On iPhone: the effects you save</strong>, and resized copies of
+      any photos you add to a photo-wall background.</li>
+    <li><strong>On iPhone, if weather is on:</strong> the latest forecast and the
+      place it was fetched for (see below).</li>
+    <li><strong>On iPhone: whether you have unlocked Faanke Pro.</strong></li>
   </ul>
-  <p>That's the complete list. No name, no email, no account, no device
-  identifier, no usage analytics, no crash reporting.</p>
+  <p>That's the complete list. No name, no email, no device identifier, no usage
+  analytics, no crash reports. There is no server, so there is no copy of any of
+  this anywhere else.</p>
 
-  <h2>Faanke cannot connect to the internet</h2>
-  <p>This is not just a promise. Faanke runs in the macOS App Sandbox and does
-  not request the network entitlement (<code>com.apple.security.network.client</code>),
-  so macOS itself blocks the app from opening outgoing connections. There is no
-  server to send anything to.</p>
+  <h2>Faanke for Mac cannot connect to the internet</h2>
+  <p>This is not just a promise. Faanke for Mac runs in the macOS App Sandbox and
+  does not request the network entitlement
+  (<code>com.apple.security.network.client</code>), so macOS itself blocks the
+  app from opening outgoing connections.</p>
+
+  <h2>Faanke for iPhone: weather and location</h2>
+  <p>Weather is off until you turn it on, either as Home Weather (part of
+  Faanke Pro) or as a weather background on the clock. When it is on:</p>
+  <ul>
+    <li>Faanke asks for your <strong>approximate</strong> location only, and only
+      while you are using the app. You can type in a city instead, which needs no
+      location permission at all.</li>
+    <li>To get the forecast, those approximate coordinates are sent to Apple's
+      WeatherKit service. To show your city's name, or to look up a city you
+      typed, they go to Apple's geocoding service. Nothing is sent to us or to
+      anyone else. Apple handles these requests under its own
+      <a href="https://www.apple.com/legal/privacy/">privacy policy</a>.</li>
+    <li>The latest forecast and the coordinates it was fetched for are kept on
+      your iPhone, so Faanke can tell when it actually needs a new one. They are
+      overwritten by the next forecast and never leave the device.</li>
+    <li>Your location is used for weather and nothing else. It is not linked to
+      your identity and is never used for tracking or advertising.</li>
+  </ul>
+  <p>You can turn weather off in Faanke's settings, or withdraw location access
+  at any time in iOS Settings › Privacy &amp; Security › Location Services.</p>
+
+  <h2>Photos (iPhone)</h2>
+  <p>Photos for a photo-wall background are picked in Apple's own photo picker,
+  so Faanke never gets access to your library — only to the photos you choose.
+  It keeps a resized copy of each one inside the app, and deletes copies that no
+  saved effect uses any more.</p>
+
+  <h2>Notifications, Lock Screen and widget (iPhone)</h2>
+  <p>The end-of-phase notification is scheduled on your iPhone itself, and the
+  Lock Screen card and the widget are updated by the app on the device. None of
+  them go through a server.</p>
+
+  <h2>Purchases (iPhone)</h2>
+  <p>Faanke Pro is bought through Apple's App Store, and payment is handled
+  entirely by Apple: we never see your payment details or your Apple Account.
+  Apple tells the app only whether Faanke Pro is unlocked, and the app remembers
+  that in your iPhone's Keychain so it still knows when you are offline. Manage
+  or cancel subscriptions in your Apple Account settings.</p>
+
+  <h2>Feedback</h2>
+  <p>The feedback button opens an email in your own mail app, addressed to us
+  and prefilled with the app version, iOS version, device model and language, so
+  we can reproduce problems. You can read and change all of it before sending,
+  and nothing is sent unless you send it. Your email address is used only to
+  reply to you.</p>
 
   <h2>No third parties</h2>
   <p>Faanke contains no analytics SDK, no advertising SDK, no crash reporter and
-  no tracking of any kind. Nothing is shared with or sold to anyone, because
-  nothing is collected in the first place.</p>
+  no tracking of any kind. Apart from the weather requests to Apple described
+  above, nothing is shared with anyone, and nothing is ever sold.</p>
 
   <h2>Deleting your data</h2>
-  <p>Moving Faanke to the Trash removes its sandbox container along with every
-  session record and preference. Nothing is left behind, and nothing exists
-  anywhere else to delete.</p>
+  <p><strong>Mac:</strong> moving Faanke to the Trash removes its sandbox
+  container along with every record and preference.</p>
+  <p><strong>iPhone:</strong> deleting the app removes its records, effects,
+  photos, settings and weather data. The one exception is the small
+  “unlocked” flag in the Keychain, which iOS may keep after the app is deleted;
+  it holds no personal information and never leaves the device. If you back up
+  your iPhone to iCloud or a computer, iOS includes Faanke's data in that
+  backup, as it does for every app.</p>
 
   <h2>Children</h2>
-  <p>Faanke is safe for all ages. Since it collects no data at all, it collects
-  no data from children either.</p>
+  <p>Faanke is suitable for all ages. It collects no personal information from
+  anyone, children included.</p>
 
   <h2>Changes</h2>
   <p>If this policy ever changes, the updated version will be posted on this
@@ -77,35 +136,60 @@
   <p>Questions about privacy, or about Faanke in general:
   <a href="mailto:kwoksw96@gmail.com">kwoksw96@gmail.com</a></p>
 
-  <p class="updated">Last updated: 26 August 2026</p>
+  <p class="updated">Last updated: 1 October 2026</p>
 </section>
 
 <!-- ========================= 简体中文 ========================= -->
 <section data-lang="zh-Hans">
-  <p class="lede">Faanke 不收集任何数据。它完全没有网络访问能力，所以你的任何信息都不会离开这台
-  Mac——不会发给我们，也不会发给任何人。</p>
+  <p class="lede">Faanke 没有服务器、没有账号、没有统计，关于你的一切都只留在你自己的设备上。Mac
+  版完全不联网；iPhone 版只为一个可选功能——天气——联网，而且只和 Apple 通信。</p>
 
   <h2>Faanke 会保存什么</h2>
-  <p>Faanke 保存的所有内容都只存在你自己的 Mac 上，位于 App 的沙盒容器内：</p>
+  <p>Faanke 保存的所有内容都只存在你自己的 Mac 或 iPhone 上，位于 App 自己的存储空间内：</p>
   <ul>
-    <li><strong>专注记录</strong>——开始时间、时长，以及那一段是专注还是休息，用于在历史页展示你的记录。</li>
-    <li><strong>偏好设置</strong>——专注/休息/延长时长、描边特效的颜色和粗细、语言选择、全局快捷键，以及是否开机自启。</li>
+    <li><strong>专注记录</strong>——每一段专注或休息的开始时间、时长，以及是否跑完，用于历史页（iPhone 上还用于首页的番茄和花）。</li>
+    <li><strong>偏好设置</strong>——各项时长、台钟或描边的外观、语言；Mac 上还有全局快捷键和是否开机自启。</li>
+    <li><strong>iPhone 上：你保存的效果</strong>，以及你加进照片墙背景的照片的缩小副本。</li>
+    <li><strong>iPhone 上，开启天气时：</strong>最近一次的天气预报，以及获取它时所在的位置（见下文）。</li>
+    <li><strong>iPhone 上：你是否已解锁 Faanke Pro。</strong></li>
   </ul>
-  <p>就这些，没有别的。不涉及姓名、邮箱、账号、设备标识符，也没有使用统计和崩溃上报。</p>
+  <p>就这些，没有别的。不涉及姓名、邮箱、设备标识符，也没有使用统计和崩溃上报。没有服务器，所以这些内容在别处也没有任何副本。</p>
 
-  <h2>Faanke 在技术上就无法联网</h2>
-  <p>这不只是一句承诺。Faanke 运行在 macOS 沙盒中，且没有申请网络权限
-  （<code>com.apple.security.network.client</code>），因此 macOS 系统本身就会阻止这个 App
-  发起任何对外连接。也不存在任何可以接收数据的服务器。</p>
+  <h2>Mac 版在技术上就无法联网</h2>
+  <p>这不只是一句承诺。Mac 版 Faanke 运行在 macOS 沙盒中，且没有申请网络权限
+  （<code>com.apple.security.network.client</code>），因此 macOS 系统本身就会阻止这个 App 发起任何对外连接。</p>
+
+  <h2>iPhone 版：天气与位置</h2>
+  <p>天气默认关闭，只有你主动开启才会使用——开启首页天气（Faanke Pro 的一部分），或在台钟里选用天气背景。开启之后：</p>
+  <ul>
+    <li>Faanke 只请求你的<strong>粗略</strong>位置，而且只在你使用 App 时请求。你也可以改成手动输入城市，那样完全不需要定位权限。</li>
+    <li>为了获取天气，这个粗略坐标会发送给 Apple 的 WeatherKit 服务；为了显示城市名称，或查找你输入的城市，会发送给 Apple 的地理编码服务。不会发给我们，也不会发给其他任何人。Apple 按照它自己的<a href="https://www.apple.com/legal/privacy/">隐私政策</a>处理这些请求。</li>
+    <li>最近一次的天气预报和获取它时的坐标会保存在你的 iPhone 上，用来判断什么时候才真的需要更新。它们会被下一次预报覆盖，并且从不离开这台设备。</li>
+    <li>位置只用于天气，不做其他用途；不与你的身份关联，也绝不用于追踪或广告。</li>
+  </ul>
+  <p>你可以在 Faanke 的设置里关闭天气，也可以随时在 iOS「设置 › 隐私与安全性 › 定位服务」里收回定位权限。</p>
+
+  <h2>照片（iPhone）</h2>
+  <p>照片墙用的照片通过 Apple 自带的照片选择器挑选，所以 Faanke 拿不到你的图库——只拿得到你选中的那几张。每张会在 App 内保存一份缩小的副本；没有任何已保存效果再用到的副本会被删除。</p>
+
+  <h2>通知、锁屏卡片与小组件（iPhone）</h2>
+  <p>到时通知由你的 iPhone 在本机排定，锁屏卡片和小组件也由 App 在本机更新，都不经过任何服务器。</p>
+
+  <h2>购买（iPhone）</h2>
+  <p>Faanke Pro 通过 Apple 的 App Store 购买，付款完全由 Apple 处理：我们看不到你的付款信息，也看不到你的 Apple 账户。Apple 只告诉 App「是否已解锁」，App 把这一点记在 iPhone 的钥匙串里，离线时也知道。订阅的管理和取消在你的 Apple 账户设置里进行。</p>
+
+  <h2>反馈</h2>
+  <p>反馈按钮会在你自己的邮件 App 里打开一封写给我们的邮件，预先填好 App 版本、iOS 版本、机型和语言，方便我们复现问题。发送前你可以看到并修改全部内容，你不发就什么都不会发出。你的邮箱地址只用于回复你。</p>
 
   <h2>没有第三方</h2>
-  <p>Faanke 不含任何统计 SDK、广告 SDK 或崩溃收集组件，也没有任何形式的追踪。不会与任何人共享或出售数据——因为根本就没有收集。</p>
+  <p>Faanke 不含任何统计 SDK、广告 SDK 或崩溃收集组件，也没有任何形式的追踪。除了上面说的发给 Apple 的天气请求，不与任何人共享任何东西，也绝不出售。</p>
 
   <h2>删除你的数据</h2>
-  <p>把 Faanke 拖进废纸篓，它的沙盒容器会连同全部专注记录和偏好设置一起被删除。不会留下任何残留，其他地方也不存在需要删除的副本。</p>
+  <p><strong>Mac：</strong>把 Faanke 拖进废纸篓，它的沙盒容器会连同全部记录和偏好设置一起被删除。</p>
+  <p><strong>iPhone：</strong>删除 App 会删掉它的记录、效果、照片、设置和天气数据。唯一的例外是钥匙串里那个很小的「已解锁」标记，iOS 可能会在删除 App 后保留它；它不含任何个人信息，也从不离开这台设备。如果你把 iPhone 备份到 iCloud 或电脑，iOS 会像对待所有 App 一样把 Faanke 的数据包含在备份里。</p>
 
   <h2>儿童</h2>
-  <p>Faanke 适合任何年龄使用。由于它完全不收集数据，自然也不会收集儿童的任何信息。</p>
+  <p>Faanke 适合任何年龄使用。它不收集任何人的个人信息，儿童也不例外。</p>
 
   <h2>政策变更</h2>
   <p>本政策若有变更，更新后的版本会发布在本页面，并在下方标注新的日期。</p>
@@ -114,35 +198,60 @@
   <p>关于隐私或 Faanke 的任何问题：
   <a href="mailto:kwoksw96@gmail.com">kwoksw96@gmail.com</a></p>
 
-  <p class="updated">最后更新：2026 年 8 月 26 日</p>
+  <p class="updated">最后更新：2026 年 10 月 1 日</p>
 </section>
 
 <!-- ========================= 繁體中文 ========================= -->
 <section data-lang="zh-Hant">
-  <p class="lede">Faanke 不收集任何資料。它完全沒有網路存取能力，所以你的任何資訊都不會離開這台
-  Mac——不會傳給我們，也不會傳給任何人。</p>
+  <p class="lede">Faanke 沒有伺服器、沒有帳號、沒有統計，關於你的一切都只留在你自己的裝置上。Mac
+  版完全不連網；iPhone 版只為一個可選功能——天氣——連網，而且只和 Apple 通訊。</p>
 
   <h2>Faanke 會儲存什麼</h2>
-  <p>Faanke 儲存的所有內容都只存在你自己的 Mac 上，位於 App 的沙盒容器內：</p>
+  <p>Faanke 儲存的所有內容都只存在你自己的 Mac 或 iPhone 上，位於 App 自己的儲存空間內：</p>
   <ul>
-    <li><strong>專注記錄</strong>——開始時間、時長，以及那一段是專注還是休息，用於在歷史頁顯示你的記錄。</li>
-    <li><strong>偏好設定</strong>——專注/休息/延長時長、描邊效果的顏色和粗細、語言選擇、全域快速鍵，以及是否登入時啟動。</li>
+    <li><strong>專注記錄</strong>——每一段專注或休息的開始時間、時長，以及是否跑完，用於歷史頁（iPhone 上還用於首頁的番茄和花）。</li>
+    <li><strong>偏好設定</strong>——各項時長、檯鐘或描邊的外觀、語言；Mac 上還有全域快速鍵和是否登入時啟動。</li>
+    <li><strong>iPhone 上：你儲存的效果</strong>，以及你加進相片牆背景的照片的縮小副本。</li>
+    <li><strong>iPhone 上，開啟天氣時：</strong>最近一次的天氣預報，以及取得它時所在的位置（見下文）。</li>
+    <li><strong>iPhone 上：你是否已解鎖 Faanke Pro。</strong></li>
   </ul>
-  <p>就這些，沒有其他。不涉及姓名、電子郵件、帳號、裝置識別碼，也沒有使用統計和當機回報。</p>
+  <p>就這些，沒有其他。不涉及姓名、電子郵件、裝置識別碼，也沒有使用統計和當機回報。沒有伺服器，所以這些內容在別處也沒有任何副本。</p>
 
-  <h2>Faanke 在技術上就無法連網</h2>
-  <p>這不只是一句承諾。Faanke 執行於 macOS 沙盒中，且沒有申請網路權限
-  （<code>com.apple.security.network.client</code>），因此 macOS 系統本身就會阻擋這個 App
-  發起任何對外連線。也不存在任何可以接收資料的伺服器。</p>
+  <h2>Mac 版在技術上就無法連網</h2>
+  <p>這不只是一句承諾。Mac 版 Faanke 執行於 macOS 沙盒中，且沒有申請網路權限
+  （<code>com.apple.security.network.client</code>），因此 macOS 系統本身就會阻擋這個 App 發起任何對外連線。</p>
+
+  <h2>iPhone 版：天氣與位置</h2>
+  <p>天氣預設關閉，只有你主動開啟才會使用——開啟首頁天氣（Faanke Pro 的一部分），或在檯鐘裡選用天氣背景。開啟之後：</p>
+  <ul>
+    <li>Faanke 只要求你的<strong>大略</strong>位置，而且只在你使用 App 時要求。你也可以改成手動輸入城市，那樣完全不需要定位權限。</li>
+    <li>為了取得天氣，這個大略座標會傳送給 Apple 的 WeatherKit 服務；為了顯示城市名稱，或查找你輸入的城市，會傳送給 Apple 的地理編碼服務。不會傳給我們，也不會傳給其他任何人。Apple 依照它自己的<a href="https://www.apple.com/legal/privacy/">隱私權政策</a>處理這些請求。</li>
+    <li>最近一次的天氣預報和取得它時的座標會保存在你的 iPhone 上，用來判斷什麼時候才真的需要更新。它們會被下一次預報覆蓋，並且從不離開這台裝置。</li>
+    <li>位置只用於天氣，不做其他用途；不與你的身分連結，也絕不用於追蹤或廣告。</li>
+  </ul>
+  <p>你可以在 Faanke 的設定裡關閉天氣，也可以隨時在 iOS「設定 › 隱私權與安全性 › 定位服務」裡收回定位權限。</p>
+
+  <h2>照片（iPhone）</h2>
+  <p>相片牆用的照片透過 Apple 內建的照片選擇器挑選，所以 Faanke 拿不到你的圖庫——只拿得到你選中的那幾張。每張會在 App 內保存一份縮小的副本；沒有任何已儲存效果再用到的副本會被刪除。</p>
+
+  <h2>通知、鎖定畫面卡片與小工具（iPhone）</h2>
+  <p>到時通知由你的 iPhone 在本機排定，鎖定畫面卡片和小工具也由 App 在本機更新，都不經過任何伺服器。</p>
+
+  <h2>購買（iPhone）</h2>
+  <p>Faanke Pro 透過 Apple 的 App Store 購買，付款完全由 Apple 處理：我們看不到你的付款資訊，也看不到你的 Apple 帳號。Apple 只告訴 App「是否已解鎖」，App 把這一點記在 iPhone 的鑰匙圈裡，離線時也知道。訂閱的管理和取消在你的 Apple 帳號設定裡進行。</p>
+
+  <h2>意見回饋</h2>
+  <p>回饋按鈕會在你自己的郵件 App 裡打開一封寫給我們的郵件，預先填好 App 版本、iOS 版本、機型和語言，方便我們重現問題。傳送前你可以看到並修改全部內容，你不送出就什麼都不會傳出。你的電子郵件地址只用於回覆你。</p>
 
   <h2>沒有第三方</h2>
-  <p>Faanke 不含任何統計 SDK、廣告 SDK 或當機收集元件，也沒有任何形式的追蹤。不會與任何人分享或販售資料——因為根本就沒有收集。</p>
+  <p>Faanke 不含任何統計 SDK、廣告 SDK 或當機收集元件，也沒有任何形式的追蹤。除了上面說的傳給 Apple 的天氣請求，不與任何人分享任何東西，也絕不販售。</p>
 
   <h2>刪除你的資料</h2>
-  <p>把 Faanke 拖進垃圾桶，它的沙盒容器會連同全部專注記錄和偏好設定一起被刪除。不會留下任何殘留，其他地方也不存在需要刪除的副本。</p>
+  <p><strong>Mac：</strong>把 Faanke 拖進垃圾桶，它的沙盒容器會連同全部記錄和偏好設定一起被刪除。</p>
+  <p><strong>iPhone：</strong>刪除 App 會刪掉它的記錄、效果、照片、設定和天氣資料。唯一的例外是鑰匙圈裡那個很小的「已解鎖」標記，iOS 可能會在刪除 App 後保留它；它不含任何個人資訊，也從不離開這台裝置。如果你把 iPhone 備份到 iCloud 或電腦，iOS 會像對待所有 App 一樣把 Faanke 的資料包含在備份裡。</p>
 
   <h2>兒童</h2>
-  <p>Faanke 適合任何年齡使用。由於它完全不收集資料，自然也不會收集兒童的任何資訊。</p>
+  <p>Faanke 適合任何年齡使用。它不收集任何人的個人資訊，兒童也不例外。</p>
 
   <h2>政策變更</h2>
   <p>本政策若有變更，更新後的版本會發布在本頁面，並在下方標註新的日期。</p>
@@ -151,37 +260,60 @@
   <p>關於隱私或 Faanke 的任何問題：
   <a href="mailto:kwoksw96@gmail.com">kwoksw96@gmail.com</a></p>
 
-  <p class="updated">最後更新：2026 年 8 月 26 日</p>
+  <p class="updated">最後更新：2026 年 10 月 1 日</p>
 </section>
 
 <!-- ========================= 日本語 ========================= -->
 <section data-lang="ja">
-  <p class="lede">Faanke は一切のデータを収集しません。ネットワークにアクセスする機能がないため、
-  あなたのデータが Mac の外に出ることはありません。開発者にも、第三者にも送信されません。</p>
+  <p class="lede">Faanke にはサーバーもアカウントも利用統計もなく、あなたに関する情報はお使いのデバイスの中にしか残りません。Mac
+  版はネットワークを一切使いません。iPhone 版がネットワークを使うのは任意の機能である天気だけで、その通信先も Apple だけです。</p>
 
   <h2>Faanke が保存するもの</h2>
-  <p>Faanke が保存する内容はすべて、お使いの Mac 上の App サンドボックス内にのみ存在します。</p>
+  <p>Faanke が保存する内容はすべて、お使いの Mac または iPhone 上の App 専用の領域にのみ存在します。</p>
   <ul>
-    <li><strong>セッション記録</strong>——開始時刻、長さ、そして集中か休憩かの区別。履歴ページで実績を表示するために使います。</li>
-    <li><strong>環境設定</strong>——集中／休憩／延長の時間、エフェクトの色と太さ、言語の選択、グローバルショートカット、ログイン時に起動するかどうか。</li>
+    <li><strong>セッション記録</strong>——集中や休憩の開始時刻、長さ、最後まで終えたかどうか。履歴の表示（iPhone ではホームのトマトと花）に使います。</li>
+    <li><strong>環境設定</strong>——各種の時間、台時計や線の見た目、言語。Mac ではグローバルショートカットとログイン時に起動するかどうかも。</li>
+    <li><strong>iPhone：保存したエフェクト</strong>と、フォトウォールの背景に追加した写真の縮小コピー。</li>
+    <li><strong>iPhone で天気をオンにしている場合：</strong>直近の天気予報と、それを取得した場所（下記参照）。</li>
+    <li><strong>iPhone：Faanke Pro を解放済みかどうか。</strong></li>
   </ul>
-  <p>以上がすべてです。氏名、メールアドレス、アカウント、デバイス識別子、利用統計、クラッシュレポートのいずれも扱いません。</p>
+  <p>以上がすべてです。氏名、メールアドレス、デバイス識別子、利用統計、クラッシュレポートのいずれも扱いません。サーバーがないため、これらのコピーがほかの場所に存在することもありません。</p>
 
-  <h2>Faanke は技術的にインターネットへ接続できません</h2>
-  <p>これは約束にとどまりません。Faanke は macOS の App サンドボックス内で動作し、ネットワーク権限
-  （<code>com.apple.security.network.client</code>）を要求していないため、macOS 自体が外部への接続を
-  ブロックします。データを送る先のサーバーも存在しません。</p>
+  <h2>Mac 版は技術的にインターネットへ接続できません</h2>
+  <p>これは約束にとどまりません。Mac 版 Faanke は macOS の App サンドボックス内で動作し、ネットワーク権限
+  （<code>com.apple.security.network.client</code>）を要求していないため、macOS 自体が外部への接続をブロックします。</p>
+
+  <h2>iPhone 版：天気と位置情報</h2>
+  <p>天気は、あなたがオンにするまで使われません。オンにする方法は、ホームの天気（Faanke Pro の機能）か、台時計で天気の背景を選ぶことです。オンにすると：</p>
+  <ul>
+    <li>Faanke が求めるのは<strong>おおよその</strong>位置情報だけで、App の使用中に限ります。代わりに都市名を入力することもでき、その場合は位置情報の許可は一切不要です。</li>
+    <li>天気予報の取得のため、このおおよその座標は Apple の WeatherKit サービスに送られます。都市名の表示や、入力した都市の検索のためには Apple のジオコーディングサービスに送られます。開発者やその他の第三者には送られません。これらのリクエストは Apple 自身の<a href="https://www.apple.com/legal/privacy/">プライバシーポリシー</a>に従って処理されます。</li>
+    <li>直近の天気予報とその取得時の座標は、本当に更新が必要なときを判断するために iPhone 上に保存されます。次の予報で上書きされ、デバイスの外に出ることはありません。</li>
+    <li>位置情報は天気のためだけに使われ、ほかの目的には使いません。あなたの身元とは結び付けられず、トラッキングや広告に使われることもありません。</li>
+  </ul>
+  <p>天気は Faanke の設定でオフにでき、位置情報へのアクセスは iOS の「設定 › プライバシーとセキュリティ › 位置情報サービス」でいつでも取り消せます。</p>
+
+  <h2>写真（iPhone）</h2>
+  <p>フォトウォールの写真は Apple 標準の写真ピッカーで選ぶため、Faanke がライブラリ全体にアクセスすることはなく、選んだ写真だけを受け取ります。各写真の縮小コピーを App 内に保存し、保存済みのどのエフェクトにも使われなくなったコピーは削除します。</p>
+
+  <h2>通知・ロック画面のカード・ウィジェット（iPhone）</h2>
+  <p>フェーズ終了の通知は iPhone 上で予約され、ロック画面のカードとウィジェットも App がデバイス上で更新します。いずれもサーバーを経由しません。</p>
+
+  <h2>購入（iPhone）</h2>
+  <p>Faanke Pro は Apple の App Store で購入でき、支払いはすべて Apple が処理します。開発者があなたの支払い情報や Apple アカウントを見ることはありません。Apple が App に伝えるのは解放済みかどうかだけで、App はそれを iPhone のキーチェーンに記録し、オフラインでもわかるようにしています。サブスクリプションの管理や解約は Apple アカウントの設定から行えます。</p>
+
+  <h2>フィードバック</h2>
+  <p>フィードバックボタンを押すと、お使いのメール App で開発者宛てのメールが開き、問題を再現できるよう App のバージョン、iOS のバージョン、機種、言語があらかじめ記入されます。送信前にすべて確認・修正でき、あなたが送信しない限り何も送られません。メールアドレスは返信のためだけに使います。</p>
 
   <h2>第三者は関与しません</h2>
-  <p>Faanke には解析 SDK、広告 SDK、クラッシュレポーターは含まれておらず、いかなる形の
-  トラッキングも行いません。そもそも何も収集していないため、共有も販売もありません。</p>
+  <p>Faanke には解析 SDK、広告 SDK、クラッシュレポーターは含まれておらず、いかなる形のトラッキングも行いません。上記の Apple への天気リクエストを除き、誰とも何も共有せず、販売することも決してありません。</p>
 
   <h2>データの削除</h2>
-  <p>Faanke をゴミ箱に入れると、サンドボックスコンテナごとすべてのセッション記録と設定が削除されます。
-  残るものはなく、他の場所に削除すべきデータも存在しません。</p>
+  <p><strong>Mac：</strong>Faanke をゴミ箱に入れると、サンドボックスコンテナごとすべての記録と設定が削除されます。</p>
+  <p><strong>iPhone：</strong>App を削除すると、記録、エフェクト、写真、設定、天気のデータが削除されます。唯一の例外はキーチェーン内の小さな「解放済み」フラグで、App の削除後も iOS が保持することがあります。個人情報は含まれず、デバイスの外に出ることもありません。iPhone を iCloud やコンピュータにバックアップしている場合、iOS はほかのすべての App と同様に Faanke のデータもバックアップに含めます。</p>
 
   <h2>お子様について</h2>
-  <p>Faanke はすべての年齢の方に安全です。一切のデータを収集しないため、お子様のデータも収集しません。</p>
+  <p>Faanke はすべての年齢の方に安全です。お子様を含め、誰からも個人情報を収集しません。</p>
 
   <h2>変更について</h2>
   <p>本ポリシーを変更する場合は、更新版をこのページに掲載し、下部の日付を更新します。</p>
@@ -190,47 +322,111 @@
   <p>プライバシーや Faanke に関するご質問：
   <a href="mailto:kwoksw96@gmail.com">kwoksw96@gmail.com</a></p>
 
-  <p class="updated">最終更新：2026年8月26日</p>
+  <p class="updated">最終更新：2026年10月1日</p>
 </section>
 
 <!-- ========================= ESPAÑOL ========================= -->
 <section data-lang="es">
-  <p class="lede">Faanke no recopila nada. No tiene ningún acceso a la red, así que
-  tus datos no pueden salir de tu Mac: ni hacia nosotros, ni hacia nadie.</p>
+  <p class="lede">Faanke no tiene servidor, ni cuenta, ni analíticas, y no guarda
+  nada sobre ti fuera de tu propio dispositivo. Faanke para Mac nunca usa la red.
+  Faanke para iPhone se conecta solo para una función opcional, el tiempo, y
+  entonces habla únicamente con Apple.</p>
 
   <h2>Qué guarda Faanke</h2>
-  <p>Todo lo que Faanke guarda permanece en tu propio Mac, dentro del contenedor
-  aislado de la app:</p>
+  <p>Todo lo que Faanke guarda permanece en tu propio Mac o iPhone, dentro del
+  almacenamiento de la app:</p>
   <ul>
-    <li><strong>Registros de sesión</strong>: la hora de inicio, la duración y si
-      fue un periodo de concentración o de descanso, para que la página de
-      Historial pueda mostrar tu progreso.</li>
-    <li><strong>Preferencias</strong>: tus duraciones de concentración, descanso y
-      extensión, el color y grosor del efecto de borde, tu idioma, el atajo
-      global y si Faanke se abre al iniciar sesión.</li>
+    <li><strong>Registros de sesión</strong>: cuándo empezó cada periodo de
+      concentración o descanso, cuánto duró y si llegó al final, para el
+      Historial (y, en el iPhone, los tomates y flores de la pantalla de
+      inicio).</li>
+    <li><strong>Preferencias</strong>: duraciones, el aspecto del reloj o del
+      trazo, tu idioma y, en el Mac, el atajo global y si Faanke se abre al
+      iniciar sesión.</li>
+    <li><strong>En el iPhone: los efectos que guardas</strong> y copias reducidas
+      de las fotos que añadas a un fondo de muro de fotos.</li>
+    <li><strong>En el iPhone, si el tiempo está activado:</strong> el último
+      pronóstico y el lugar para el que se obtuvo (ver abajo).</li>
+    <li><strong>En el iPhone: si has desbloqueado Faanke Pro.</strong></li>
   </ul>
-  <p>Esa es la lista completa. Sin nombre, sin correo, sin cuenta, sin
-  identificador de dispositivo, sin analíticas de uso, sin informes de fallos.</p>
+  <p>Esa es la lista completa. Sin nombre, sin correo, sin identificador de
+  dispositivo, sin analíticas de uso, sin informes de fallos. No hay servidor,
+  así que no existe ninguna copia de esto en ningún otro sitio.</p>
 
-  <h2>Faanke no puede conectarse a internet</h2>
-  <p>Esto no es solo una promesa. Faanke se ejecuta en el App Sandbox de macOS y
-  no solicita el permiso de red (<code>com.apple.security.network.client</code>),
-  por lo que el propio macOS impide que la app abra conexiones salientes. No hay
-  ningún servidor al que enviar nada.</p>
+  <h2>Faanke para Mac no puede conectarse a internet</h2>
+  <p>Esto no es solo una promesa. Faanke para Mac se ejecuta en el App Sandbox de
+  macOS y no solicita el permiso de red
+  (<code>com.apple.security.network.client</code>), por lo que el propio macOS
+  impide que la app abra conexiones salientes.</p>
+
+  <h2>Faanke para iPhone: tiempo y ubicación</h2>
+  <p>El tiempo está desactivado hasta que lo activas, ya sea como tiempo en
+  inicio (parte de Faanke Pro) o como fondo de tiempo en el reloj. Cuando está
+  activado:</p>
+  <ul>
+    <li>Faanke pide solo tu ubicación <strong>aproximada</strong>, y solo
+      mientras usas la app. También puedes escribir una ciudad, lo que no
+      requiere ningún permiso de ubicación.</li>
+    <li>Para obtener el pronóstico, esas coordenadas aproximadas se envían al
+      servicio WeatherKit de Apple. Para mostrar el nombre de tu ciudad, o buscar
+      la ciudad que escribiste, se envían al servicio de geocodificación de
+      Apple. No se envía nada a nosotros ni a nadie más. Apple trata estas
+      solicitudes según su propia
+      <a href="https://www.apple.com/legal/privacy/">política de privacidad</a>.</li>
+    <li>El último pronóstico y las coordenadas para las que se obtuvo se guardan
+      en tu iPhone, para que Faanke sepa cuándo necesita de verdad uno nuevo. Se
+      sobrescriben con el siguiente pronóstico y nunca salen del dispositivo.</li>
+    <li>Tu ubicación se usa para el tiempo y para nada más. No se vincula a tu
+      identidad y nunca se usa para seguimiento ni publicidad.</li>
+  </ul>
+  <p>Puedes desactivar el tiempo en los ajustes de Faanke, o retirar el acceso a
+  la ubicación en cualquier momento en Ajustes de iOS › Privacidad y seguridad ›
+  Localización.</p>
+
+  <h2>Fotos (iPhone)</h2>
+  <p>Las fotos de un muro de fotos se eligen con el selector de fotos de Apple,
+  así que Faanke nunca accede a tu fototeca, solo a las fotos que eliges. Guarda
+  una copia reducida de cada una dentro de la app y borra las copias que ya no
+  usa ningún efecto guardado.</p>
+
+  <h2>Notificaciones, pantalla de bloqueo y widget (iPhone)</h2>
+  <p>La notificación de fin de fase se programa en el propio iPhone, y la tarjeta
+  de la pantalla de bloqueo y el widget los actualiza la app en el dispositivo.
+  Nada de esto pasa por un servidor.</p>
+
+  <h2>Compras (iPhone)</h2>
+  <p>Faanke Pro se compra a través del App Store de Apple, y Apple se encarga por
+  completo del pago: nunca vemos tus datos de pago ni tu cuenta de Apple. Apple
+  solo le dice a la app si Faanke Pro está desbloqueado, y la app lo recuerda en
+  el llavero del iPhone para saberlo también sin conexión. Gestiona o cancela
+  las suscripciones en los ajustes de tu cuenta de Apple.</p>
+
+  <h2>Comentarios</h2>
+  <p>El botón de comentarios abre un correo en tu propia app de correo, dirigido
+  a nosotros y con la versión de la app, la versión de iOS, el modelo del
+  dispositivo y el idioma ya rellenados, para poder reproducir los problemas.
+  Puedes leerlo y cambiarlo todo antes de enviarlo, y no se envía nada si tú no
+  lo envías. Tu dirección de correo solo se usa para responderte.</p>
 
   <h2>Sin terceros</h2>
   <p>Faanke no contiene ningún SDK de analíticas ni de publicidad, ningún
-  informador de fallos ni seguimiento de ningún tipo. No se comparte ni se vende
-  nada a nadie, porque no se recopila nada en primer lugar.</p>
+  informador de fallos ni seguimiento de ningún tipo. Aparte de las solicitudes
+  del tiempo a Apple descritas arriba, no se comparte nada con nadie, y nunca se
+  vende nada.</p>
 
   <h2>Eliminar tus datos</h2>
-  <p>Mover Faanke a la Papelera elimina su contenedor aislado junto con todos los
-  registros de sesión y preferencias. No queda nada, y no existe nada en ningún
-  otro sitio que borrar.</p>
+  <p><strong>Mac:</strong> mover Faanke a la Papelera elimina su contenedor
+  aislado junto con todos los registros y preferencias.</p>
+  <p><strong>iPhone:</strong> eliminar la app borra sus registros, efectos,
+  fotos, ajustes y datos del tiempo. La única excepción es la pequeña marca de
+  «desbloqueado» del llavero, que iOS puede conservar tras eliminar la app; no
+  contiene información personal y nunca sale del dispositivo. Si haces copia de
+  seguridad del iPhone en iCloud o en un ordenador, iOS incluye los datos de
+  Faanke en ella, como hace con cualquier app.</p>
 
   <h2>Menores</h2>
-  <p>Faanke es seguro para todas las edades. Como no recopila ningún dato,
-  tampoco recopila datos de menores.</p>
+  <p>Faanke es apto para todas las edades. No recopila información personal de
+  nadie, tampoco de menores.</p>
 
   <h2>Cambios</h2>
   <p>Si esta política cambia alguna vez, la versión actualizada se publicará en
@@ -240,50 +436,115 @@
   <p>Dudas sobre privacidad o sobre Faanke en general:
   <a href="mailto:kwoksw96@gmail.com">kwoksw96@gmail.com</a></p>
 
-  <p class="updated">Última actualización: 26 de agosto de 2026</p>
+  <p class="updated">Última actualización: 1 de octubre de 2026</p>
 </section>
 
 <!-- ========================= FRANÇAIS ========================= -->
 <section data-lang="fr">
-  <p class="lede">Faanke ne collecte rien. L'app n'a aucun accès au réseau, donc
-  aucune de vos données ne peut quitter votre Mac — ni vers nous, ni vers
-  quiconque.</p>
+  <p class="lede">Faanke n'a ni serveur, ni compte, ni statistiques, et ne garde
+  rien sur vous ailleurs que sur votre propre appareil. Faanke pour Mac n'utilise
+  jamais le réseau. Faanke pour iPhone ne se connecte que pour une fonction
+  facultative, la météo, et ne parle alors qu'à Apple.</p>
 
   <h2>Ce que Faanke enregistre</h2>
-  <p>Tout ce que Faanke enregistre reste sur votre propre Mac, dans le conteneur
-  isolé de l'app :</p>
+  <p>Tout ce que Faanke enregistre reste sur votre propre Mac ou iPhone, dans le
+  stockage de l'app :</p>
   <ul>
-    <li><strong>Historique des sessions</strong> — l'heure de début, la durée et
-      s'il s'agissait d'une phase de concentration ou de pause, afin que la page
-      Historique puisse afficher votre progression.</li>
-    <li><strong>Préférences</strong> — vos durées de concentration, de pause et de
-      prolongation, la couleur et l'épaisseur de l'effet de bordure, votre
-      langue, le raccourci global et si Faanke se lance à l'ouverture de session.</li>
+    <li><strong>Historique des sessions</strong> — l'heure de début de chaque
+      phase de concentration ou de pause, sa durée et si elle est allée à son
+      terme, pour l'Historique (et, sur iPhone, les tomates et les fleurs de
+      l'accueil).</li>
+    <li><strong>Préférences</strong> — les durées, l'apparence de l'horloge ou du
+      tracé, votre langue et, sur Mac, le raccourci global et le lancement à
+      l'ouverture de session.</li>
+    <li><strong>Sur iPhone : les effets que vous enregistrez</strong>, et des
+      copies réduites des photos ajoutées à un fond « mur de photos ».</li>
+    <li><strong>Sur iPhone, si la météo est activée :</strong> les dernières
+      prévisions et le lieu pour lequel elles ont été obtenues (voir plus
+      bas).</li>
+    <li><strong>Sur iPhone : si vous avez débloqué Faanke Pro.</strong></li>
   </ul>
-  <p>C'est la liste complète. Aucun nom, aucune adresse e-mail, aucun compte,
-  aucun identifiant d'appareil, aucune statistique d'usage, aucun rapport
-  d'incident.</p>
+  <p>C'est la liste complète. Aucun nom, aucune adresse e-mail, aucun
+  identifiant d'appareil, aucune statistique d'usage, aucun rapport d'incident.
+  Il n'y a pas de serveur, donc aucune copie de tout cela n'existe ailleurs.</p>
 
-  <h2>Faanke ne peut pas se connecter à internet</h2>
-  <p>Ce n'est pas qu'une promesse. Faanke s'exécute dans le bac à sable macOS et
-  ne demande pas le droit d'accès au réseau
+  <h2>Faanke pour Mac ne peut pas se connecter à internet</h2>
+  <p>Ce n'est pas qu'une promesse. Faanke pour Mac s'exécute dans le bac à sable
+  macOS et ne demande pas le droit d'accès au réseau
   (<code>com.apple.security.network.client</code>) : macOS lui-même empêche donc
-  l'app d'ouvrir la moindre connexion sortante. Il n'existe aucun serveur
-  auquel envoyer quoi que ce soit.</p>
+  l'app d'ouvrir la moindre connexion sortante.</p>
+
+  <h2>Faanke pour iPhone : météo et position</h2>
+  <p>La météo est désactivée tant que vous ne l'activez pas, soit comme météo de
+  l'accueil (incluse dans Faanke Pro), soit comme fond météo sur l'horloge. Une
+  fois activée :</p>
+  <ul>
+    <li>Faanke ne demande que votre position <strong>approximative</strong>, et
+      seulement pendant que vous utilisez l'app. Vous pouvez aussi saisir une
+      ville, ce qui ne demande aucune autorisation de localisation.</li>
+    <li>Pour obtenir les prévisions, ces coordonnées approximatives sont envoyées
+      au service WeatherKit d'Apple. Pour afficher le nom de votre ville, ou
+      chercher la ville saisie, elles sont envoyées au service de géocodage
+      d'Apple. Rien n'est envoyé à nous ni à personne d'autre. Apple traite ces
+      requêtes selon sa propre
+      <a href="https://www.apple.com/legal/privacy/">politique de confidentialité</a>.</li>
+    <li>Les dernières prévisions et les coordonnées pour lesquelles elles ont été
+      obtenues sont conservées sur votre iPhone, pour que Faanke sache quand il
+      en faut vraiment de nouvelles. Elles sont remplacées par les prévisions
+      suivantes et ne quittent jamais l'appareil.</li>
+    <li>Votre position sert à la météo et à rien d'autre. Elle n'est pas liée à
+      votre identité et n'est jamais utilisée pour le suivi ni la publicité.</li>
+  </ul>
+  <p>Vous pouvez désactiver la météo dans les réglages de Faanke, ou retirer
+  l'accès à la position à tout moment dans Réglages iOS › Confidentialité et
+  sécurité › Service de localisation.</p>
+
+  <h2>Photos (iPhone)</h2>
+  <p>Les photos d'un mur de photos sont choisies dans le sélecteur de photos
+  d'Apple : Faanke n'accède jamais à votre photothèque, seulement aux photos que
+  vous choisissez. L'app en garde une copie réduite et supprime les copies
+  qu'aucun effet enregistré n'utilise plus.</p>
+
+  <h2>Notifications, écran verrouillé et widget (iPhone)</h2>
+  <p>La notification de fin de phase est programmée sur l'iPhone lui-même, et la
+  carte de l'écran verrouillé et le widget sont mis à jour par l'app sur
+  l'appareil. Rien de tout cela ne passe par un serveur.</p>
+
+  <h2>Achats (iPhone)</h2>
+  <p>Faanke Pro s'achète via l'App Store d'Apple, et le paiement est entièrement
+  géré par Apple : nous ne voyons jamais vos informations de paiement ni votre
+  compte Apple. Apple indique seulement à l'app si Faanke Pro est débloqué, et
+  l'app le retient dans le trousseau de l'iPhone pour le savoir même hors ligne.
+  Gérez ou résiliez vos abonnements dans les réglages de votre compte Apple.</p>
+
+  <h2>Retours</h2>
+  <p>Le bouton de retour ouvre un e-mail dans votre propre app de messagerie,
+  adressé à nous et prérempli avec la version de l'app, la version d'iOS, le
+  modèle de l'appareil et la langue, pour que nous puissions reproduire les
+  problèmes. Vous pouvez tout lire et tout modifier avant l'envoi, et rien n'est
+  envoyé si vous ne l'envoyez pas. Votre adresse e-mail ne sert qu'à vous
+  répondre.</p>
 
   <h2>Aucun tiers</h2>
   <p>Faanke ne contient aucun SDK d'analyse ou de publicité, aucun rapporteur
-  d'incidents et aucun traçage d'aucune sorte. Rien n'est partagé ni vendu à
-  personne, puisque rien n'est collecté au départ.</p>
+  d'incidents et aucun traçage d'aucune sorte. En dehors des requêtes météo à
+  Apple décrites plus haut, rien n'est partagé avec qui que ce soit, et rien
+  n'est jamais vendu.</p>
 
   <h2>Supprimer vos données</h2>
-  <p>Mettre Faanke à la corbeille supprime son conteneur isolé ainsi que tout
-  l'historique et toutes les préférences. Rien ne subsiste, et rien n'existe
-  ailleurs qui puisse être supprimé.</p>
+  <p><strong>Mac :</strong> mettre Faanke à la corbeille supprime son conteneur
+  isolé ainsi que tout l'historique et toutes les préférences.</p>
+  <p><strong>iPhone :</strong> supprimer l'app efface son historique, ses effets,
+  ses photos, ses réglages et ses données météo. La seule exception est le petit
+  indicateur « débloqué » du trousseau, qu'iOS peut conserver après la
+  suppression de l'app ; il ne contient aucune information personnelle et ne
+  quitte jamais l'appareil. Si vous sauvegardez votre iPhone sur iCloud ou sur un
+  ordinateur, iOS inclut les données de Faanke dans cette sauvegarde, comme pour
+  toute app.</p>
 
   <h2>Enfants</h2>
-  <p>Faanke convient à tous les âges. Puisque l'app ne collecte aucune donnée,
-  elle n'en collecte pas non plus auprès des enfants.</p>
+  <p>Faanke convient à tous les âges. L'app ne collecte aucune information
+  personnelle auprès de quiconque, enfants compris.</p>
 
   <h2>Modifications</h2>
   <p>Si cette politique venait à changer, la version mise à jour serait publiée
@@ -293,49 +554,116 @@
   <p>Questions sur la confidentialité ou sur Faanke en général :
   <a href="mailto:kwoksw96@gmail.com">kwoksw96@gmail.com</a></p>
 
-  <p class="updated">Dernière mise à jour : 26 août 2026</p>
+  <p class="updated">Dernière mise à jour : 1er octobre 2026</p>
 </section>
 
 <!-- ========================= DEUTSCH ========================= -->
 <section data-lang="de">
-  <p class="lede">Faanke erhebt nichts. Die App hat keinerlei Netzwerkzugriff,
-  deine Daten können deinen Mac also gar nicht verlassen — weder zu uns noch zu
-  sonst jemandem.</p>
+  <p class="lede">Faanke hat keinen Server, kein Konto und keine Analyse und
+  speichert nichts über dich außer auf deinem eigenen Gerät. Faanke für den Mac
+  nutzt das Netzwerk nie. Faanke fürs iPhone geht nur für eine optionale
+  Funktion online, das Wetter, und spricht dann ausschließlich mit Apple.</p>
 
   <h2>Was Faanke speichert</h2>
-  <p>Alles, was Faanke speichert, bleibt auf deinem eigenen Mac, im
-  Sandbox-Container der App:</p>
+  <p>Alles, was Faanke speichert, bleibt auf deinem eigenen Mac oder iPhone, im
+  Speicher der App:</p>
   <ul>
-    <li><strong>Sitzungsaufzeichnungen</strong> — Startzeit, Dauer und ob es eine
-      Fokus- oder Pausenphase war, damit die Verlaufsseite deine Entwicklung
-      zeigen kann.</li>
-    <li><strong>Einstellungen</strong> — deine Fokus-, Pausen- und
-      Verlängerungsdauern, Farbe und Stärke des Randeffekts, deine Sprachwahl,
-      der globale Kurzbefehl und ob Faanke beim Anmelden startet.</li>
+    <li><strong>Sitzungsaufzeichnungen</strong> — wann jede Fokus- oder
+      Pausenphase begann, wie lange sie lief und ob sie bis zum Ende lief, für
+      den Verlauf (und auf dem iPhone für die Tomaten und Blumen auf dem
+      Startbildschirm).</li>
+    <li><strong>Einstellungen</strong> — Dauern, das Aussehen der Uhr oder der
+      Linie, deine Sprache und auf dem Mac der globale Kurzbefehl und ob Faanke
+      beim Anmelden startet.</li>
+    <li><strong>Auf dem iPhone: deine gespeicherten Effekte</strong> und
+      verkleinerte Kopien der Fotos, die du einer Fotowand hinzufügst.</li>
+    <li><strong>Auf dem iPhone, wenn das Wetter eingeschaltet ist:</strong> die
+      letzte Vorhersage und der Ort, für den sie abgerufen wurde (siehe
+      unten).</li>
+    <li><strong>Auf dem iPhone: ob du Faanke Pro freigeschaltet hast.</strong></li>
   </ul>
-  <p>Das ist die vollständige Liste. Kein Name, keine E-Mail-Adresse, kein
-  Konto, keine Gerätekennung, keine Nutzungsanalyse, keine Absturzberichte.</p>
+  <p>Das ist die vollständige Liste. Kein Name, keine E-Mail-Adresse, keine
+  Gerätekennung, keine Nutzungsanalyse, keine Absturzberichte. Es gibt keinen
+  Server, also existiert davon nirgendwo sonst eine Kopie.</p>
 
-  <h2>Faanke kann sich nicht mit dem Internet verbinden</h2>
-  <p>Das ist nicht bloß ein Versprechen. Faanke läuft in der macOS App Sandbox
-  und fordert die Netzwerkberechtigung
+  <h2>Faanke für den Mac kann sich nicht mit dem Internet verbinden</h2>
+  <p>Das ist nicht bloß ein Versprechen. Faanke für den Mac läuft in der macOS App
+  Sandbox und fordert die Netzwerkberechtigung
   (<code>com.apple.security.network.client</code>) nicht an — macOS selbst
-  blockiert daher jede ausgehende Verbindung der App. Es gibt auch keinen
-  Server, an den etwas gesendet werden könnte.</p>
+  blockiert daher jede ausgehende Verbindung der App.</p>
+
+  <h2>Faanke fürs iPhone: Wetter und Standort</h2>
+  <p>Das Wetter ist aus, bis du es einschaltest — entweder als Wetter auf der
+  Startseite (Teil von Faanke Pro) oder als Wetter-Hintergrund auf der Uhr. Wenn
+  es eingeschaltet ist:</p>
+  <ul>
+    <li>Faanke fragt nur nach deinem <strong>ungefähren</strong> Standort, und
+      nur während du die App benutzt. Du kannst stattdessen auch eine Stadt
+      eingeben; dafür ist gar keine Standortfreigabe nötig.</li>
+    <li>Um die Vorhersage abzurufen, werden diese ungefähren Koordinaten an
+      Apples Dienst WeatherKit gesendet. Um den Namen deiner Stadt anzuzeigen
+      oder eine eingegebene Stadt zu finden, gehen sie an Apples
+      Geokodierungsdienst. An uns oder sonst jemanden wird nichts gesendet. Apple
+      verarbeitet diese Anfragen nach seiner eigenen
+      <a href="https://www.apple.com/legal/privacy/">Datenschutzrichtlinie</a>.</li>
+    <li>Die letzte Vorhersage und die Koordinaten, für die sie abgerufen wurde,
+      bleiben auf deinem iPhone, damit Faanke erkennt, wann wirklich eine neue
+      nötig ist. Sie werden von der nächsten Vorhersage überschrieben und
+      verlassen das Gerät nie.</li>
+    <li>Dein Standort wird nur für das Wetter verwendet und für nichts anderes.
+      Er wird nicht mit deiner Identität verknüpft und nie für Tracking oder
+      Werbung genutzt.</li>
+  </ul>
+  <p>Du kannst das Wetter in den Einstellungen von Faanke ausschalten oder den
+  Standortzugriff jederzeit in den iOS-Einstellungen › Datenschutz &amp;
+  Sicherheit › Ortungsdienste entziehen.</p>
+
+  <h2>Fotos (iPhone)</h2>
+  <p>Fotos für eine Fotowand wählst du in Apples eigener Fotoauswahl aus. Faanke
+  erhält daher nie Zugriff auf deine Mediathek, sondern nur auf die Fotos, die
+  du auswählst. Die App behält von jedem eine verkleinerte Kopie und löscht
+  Kopien, die kein gespeicherter Effekt mehr verwendet.</p>
+
+  <h2>Mitteilungen, Sperrbildschirm und Widget (iPhone)</h2>
+  <p>Die Mitteilung am Ende einer Phase wird auf dem iPhone selbst geplant, und
+  die Sperrbildschirm-Karte und das Widget aktualisiert die App auf dem Gerät.
+  Nichts davon läuft über einen Server.</p>
+
+  <h2>Käufe (iPhone)</h2>
+  <p>Faanke Pro wird über Apples App Store gekauft, und die Zahlung wickelt
+  vollständig Apple ab: Wir sehen weder deine Zahlungsdaten noch deinen Apple
+  Account. Apple teilt der App nur mit, ob Faanke Pro freigeschaltet ist, und
+  die App merkt sich das im Schlüsselbund des iPhone, damit sie es auch offline
+  weiß. Abonnements verwaltest oder kündigst du in den Einstellungen deines
+  Apple Accounts.</p>
+
+  <h2>Feedback</h2>
+  <p>Die Feedback-Taste öffnet in deiner eigenen Mail-App eine E-Mail an uns,
+  vorausgefüllt mit App-Version, iOS-Version, Gerätemodell und Sprache, damit
+  wir Probleme nachstellen können. Du kannst vor dem Senden alles lesen und
+  ändern, und es wird nichts gesendet, solange du es nicht sendest. Deine
+  E-Mail-Adresse wird nur verwendet, um dir zu antworten.</p>
 
   <h2>Keine Dritten</h2>
   <p>Faanke enthält kein Analyse-SDK, kein Werbe-SDK, keinen Absturzberichter
-  und kein Tracking jeglicher Art. Es wird nichts weitergegeben oder verkauft,
-  weil von vornherein nichts erhoben wird.</p>
+  und kein Tracking jeglicher Art. Abgesehen von den oben beschriebenen
+  Wetteranfragen an Apple wird nichts mit irgendjemandem geteilt, und es wird
+  nie etwas verkauft.</p>
 
   <h2>Deine Daten löschen</h2>
-  <p>Wenn du Faanke in den Papierkorb legst, wird der Sandbox-Container mitsamt
-  allen Aufzeichnungen und Einstellungen entfernt. Es bleibt nichts zurück, und
-  anderswo existiert nichts, was gelöscht werden müsste.</p>
+  <p><strong>Mac:</strong> Wenn du Faanke in den Papierkorb legst, wird der
+  Sandbox-Container mitsamt allen Aufzeichnungen und Einstellungen entfernt.</p>
+  <p><strong>iPhone:</strong> Wenn du die App löschst, werden ihre
+  Aufzeichnungen, Effekte, Fotos, Einstellungen und Wetterdaten entfernt. Die
+  einzige Ausnahme ist die kleine „Freigeschaltet“-Markierung im
+  Schlüsselbund, die iOS nach dem Löschen der App behalten kann; sie enthält
+  keine persönlichen Informationen und verlässt das Gerät nie. Wenn du dein
+  iPhone in iCloud oder auf einem Computer sicherst, nimmt iOS die Daten von
+  Faanke in diese Sicherung auf, wie bei jeder App.</p>
 
   <h2>Kinder</h2>
-  <p>Faanke ist für jedes Alter geeignet. Da überhaupt keine Daten erhoben
-  werden, werden auch keine Daten von Kindern erhoben.</p>
+  <p>Faanke ist für jedes Alter geeignet. Die App erhebt von niemandem
+  persönliche Informationen, auch nicht von Kindern.</p>
 
   <h2>Änderungen</h2>
   <p>Sollte sich diese Richtlinie ändern, wird die aktualisierte Fassung mit
@@ -345,7 +673,7 @@
   <p>Fragen zum Datenschutz oder zu Faanke allgemein:
   <a href="mailto:kwoksw96@gmail.com">kwoksw96@gmail.com</a></p>
 
-  <p class="updated">Zuletzt aktualisiert: 26. August 2026</p>
+  <p class="updated">Zuletzt aktualisiert: 1. Oktober 2026</p>
 </section>
 
 </div>
