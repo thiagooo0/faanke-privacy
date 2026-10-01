@@ -1,7 +1,7 @@
 # faanke-privacy
 
 Public site for [Faanke](https://github.com/thiagooo0/Faanke), a pomodoro timer
-for Mac and iPhone. It exists because the App Store requires a publicly reachable Privacy
+for Mac, iPhone and iPad. It exists because the App Store requires a publicly reachable Privacy
 Policy URL and Support URL, and the app's own repository is private.
 
 Served by GitHub Pages from the `main` branch:
@@ -30,7 +30,7 @@ One Privacy Policy URL serves both platforms on the App Store, so every claim in
 - **Mac**: the policy says Faanke for Mac cannot reach the network. That holds
   only while the Mac app has no network code and `Faanke.entitlements` does not
   contain `com.apple.security.network.client`.
-- **iPhone**: the only network traffic is weather — approximate location sent
+- **iPhone and iPad**: the only network traffic is weather — approximate location sent
   to Apple's WeatherKit and Apple's geocoder, and only after the user turns
   weather on. The latest forecast and the coordinates it was fetched for are
   cached on the device. Photos come through the system picker (no library
